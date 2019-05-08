@@ -1,10 +1,9 @@
-# PHP_XLSXWriter_pr
+<?php
+include_once("xlsxwriter.class.php");
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
 
-php快速导出Excel，基于PHP_XLSXWriter修改。
-可以同时导出多个工作表
-目前不支持单个单元格设定。
-
-```php
 $list = [];
 for ($i = 0; $i < 5; $i++) {
     $list[] = ['2015-01-01', '1', '-50.5', '2010-01-01 23:00:00', '2012-12-31 23:00:00', '=D2'];
@@ -107,4 +106,5 @@ $data = [
 ];
 
 $writer = new XLSXWriter($data);
-```
+exit(0);
+
