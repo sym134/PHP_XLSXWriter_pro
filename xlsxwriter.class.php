@@ -42,14 +42,6 @@ class XLSXWriter
         if (!is_array($data['sheet']) || empty($data['filename']))
             return false;
 
-        // if ($data['is_download']) {
-        //     header('Content-disposition: attachment; filename="' . XLSXWriter::sanitize_filename($data['filename'] . '.xlsx') . '"');
-        //     header("Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-        //     header('Content-Transfer-Encoding: binary');
-        //     header('Cache-Control: must-revalidate');
-        //     header('Pragma: public');
-        // }
-
         $this->setTitle($data['title']);
         $this->setSubject($data['subject']);
         $this->setAuthor($data['author']);
